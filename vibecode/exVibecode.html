@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bárbara's Coffee</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            marrom: '#895129',
+            abacate: '#568203',
+            amendoa: '#EED9C4',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-amendoa/40 font-sans text-marrom antialiased">
+
+  <!-- ===================== 1. HEADER ===================== -->
+  <header class="sticky top-0 z-50 bg-amendoa/95 backdrop-blur border-b border-marrom/10">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#inicio" class="font-display text-2xl font-bold text-marrom">
+        Bárbara's <span class="text-abacate">Coffe</span>
+      </a>
+
+      <nav class="hidden gap-8 text-sm font-medium md:flex">
+        <a href="#inicio" class="transition hover:text-abacate">Início</a>
+        <a href="#producao" class="transition hover:text-abacate">Produção</a>
+        <a href="#produtos" class="transition hover:text-abacate">Produtos</a>
+        <a href="#contato" class="transition hover:text-abacate">Contato</a>
+      </nav>
+
+      <!-- Botão menu mobile -->
+      <button id="menu-btn" class="md:hidden" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav id="menu-mobile" class="hidden flex-col gap-4 border-t border-marrom/10 px-6 pb-4 pt-3 text-sm font-medium md:hidden">
+      <a href="#inicio" class="hover:text-abacate">Início</a>
+      <a href="#producao" class="hover:text-abacate">Produção</a>
+      <a href="#produtos" class="hover:text-abacate">Produtos</a>
+      <a href="#contato" class="hover:text-abacate">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== 2. HERO ===================== -->
+    <section id="inicio" class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
+      <!-- Imagem (esquerda) -->
+      <div class="order-1">
+        <!-- TROQUE A IMAGEM ABAIXO -->
+        <img
+          src="./imgs/bcoffee.jpg"
+          alt="Xícara de café fresco"
+          class="h-full w-full rounded-3xl object-cover shadow-xl"
+        />
+      </div>
+
+      <!-- Texto (direita) -->
+      <div class="order-2">
+        <span class="mb-4 inline-block rounded-full bg-abacate/15 px-4 py-1 text-sm font-semibold text-abacate">
+          Café artesanal
+        </span>
+        <h1 class="font-display text-4xl font-bold leading-tight md:text-5xl">
+          Cada xícara conta uma história de carinho e sabor.
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-marrom/80">
+          Na Bárbara's Coffee, selecionamos grãos especiais e preparamos cada bebida com cuidado
+          para transformar o seu dia. Venha sentir o aroma, o sabor e o aconchego de um café feito de verdade.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#produtos" class="rounded-full bg-marrom px-8 py-3 font-semibold text-amendoa shadow transition hover:bg-marrom/90">
+            Conheça nossos cafés
+          </a>
+          <a href="#producao" class="rounded-full border-2 border-abacate px-8 py-3 font-semibold text-abacate transition hover:bg-abacate hover:text-white">
+            Como produzimos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. PRODUÇÃO ===================== -->
+    <section id="producao" class="bg-marrom py-20 text-amendoa">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-display text-3xl font-bold md:text-4xl">Nossa produção</h2>
+          <p class="mt-4 text-amendoa/80">Do cultivo à xícara, cada etapa é feita com atenção e respeito ao grão.</p>
+        </div>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-3">
+          <!-- Caixa 1 -->
+          <article class="rounded-2xl bg-amendoa p-8 text-marrom shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-abacate font-display text-xl font-bold text-white">1</div>
+            <h3 class="font-display text-xl font-bold">Cultivo e colheita</h3>
+            <p class="mt-3 text-marrom/80">
+              Trabalhamos com pequenos produtores que cultivam os grãos de forma sustentável
+              e colhem apenas os frutos no ponto ideal de maturação.
+            </p>
+          </article>
+
+          <!-- Caixa 2 -->
+          <article class="rounded-2xl bg-amendoa p-8 text-marrom shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-abacate font-display text-xl font-bold text-white">2</div>
+            <h3 class="font-display text-xl font-bold">Secagem e seleção</h3>
+            <p class="mt-3 text-marrom/80">
+              Os grãos secam naturalmente ao sol e passam por uma seleção rigorosa,
+              garantindo qualidade e uniformidade em cada lote.
+            </p>
+          </article>
+
+          <!-- Caixa 3 -->
+          <article class="rounded-2xl bg-amendoa p-8 text-marrom shadow-lg">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-abacate font-display text-xl font-bold text-white">3</div>
+            <h3 class="font-display text-xl font-bold">Torra e moagem</h3>
+            <p class="mt-3 text-marrom/80">
+              A torra é feita em pequenos lotes para realçar aroma e sabor,
+              e a moagem acontece pouco antes do preparo para manter o café sempre fresco.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. PRODUTOS ===================== -->
+    <section id="produtos" class="mx-auto max-w-6xl px-6 py-20">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="font-display text-3xl font-bold md:text-4xl">Nossos produtos</h2>
+        <p class="mt-4 text-marrom/80">Algumas das nossas bebidas favoritas, preparadas na hora para você.</p>
+      </div>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <!-- Expresso -->
+        <article class="overflow-hidden rounded-2xl bg-amendoa shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
+          <!-- TROQUE A IMAGEM ABAIXO -->
+          <img src="./imgs/expresso.jpg" alt="Expresso" class="h-64 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold">Expresso</h3>
+            <p class="mt-2 text-marrom/80">Intenso, encorpado e com crema aveludada. Para quem ama o sabor puro do café.</p>
+          </div>
+        </article>
+
+        <!-- Cappuccino -->
+        <article class="overflow-hidden rounded-2xl bg-amendoa shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
+          <!-- TROQUE A IMAGEM ABAIXO -->
+          <img src="./imgs/cappuccino.webp" alt="Cappuccino" class="h-64 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold">Cappuccino</h3>
+            <p class="mt-2 text-marrom/80">Equilíbrio perfeito entre café, leite vaporizado e uma cremosa camada de espuma.</p>
+          </div>
+        </article>
+
+        <!-- Mocha -->
+        <article class="overflow-hidden rounded-2xl bg-amendoa shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
+          <!-- TROQUE A IMAGEM ABAIXO -->
+          <img src="./imgs/mocha.webp" alt="Mocha" class="h-64 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold">Mocha</h3>
+            <p class="mt-2 text-marrom/80">Café, chocolate e leite se encontram nesta bebida doce e reconfortante.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== 5. CONTATO (FOOTER) ===================== -->
+  <footer id="contato" class="bg-abacate text-white">
+    <div class="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
+      <div>
+        <h3 class="font-display text-2xl font-bold">Bárbara's Coffee</h3>
+        <p class="mt-3 text-white/80">Café feito com carinho, do grão à xícara.</p>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold">Contato</h4>
+        <ul class="mt-3 space-y-2 text-white/90">
+          <li>
+            E-mail:
+            <a href="mailto:contato@barbarascoffee.com" class="underline hover:text-amendoa">contato@barbarascoffee.com</a>
+          </li>
+          <li>
+            Telefone:
+            <a href="tel:+5511999990000" class="underline hover:text-amendoa">(11) 99999-0000</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold">Navegação</h4>
+        <ul class="mt-3 space-y-2 text-white/90">
+          <li><a href="#inicio" class="hover:text-amendoa">Início</a></li>
+          <li><a href="#producao" class="hover:text-amendoa">Produção</a></li>
+          <li><a href="#produtos" class="hover:text-amendoa">Produtos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/20 py-5 text-center text-sm text-white/70">
+      © 2026 Bárbara's Coffee. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu-mobile');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    });
+    menu.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+      })
+    );
+  </script>
+</body>
+</html>
